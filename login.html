@@ -1,5 +1,74 @@
 <!DOCTYPE html>
-<button id="loginBtn">Login</button>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EGAM Login</title>
+
+<style>
+body{
+    font-family:Arial;
+    background:#f4f4f4;
+}
+
+.container{
+    max-width:400px;
+    margin:100px auto;
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+h2{
+    text-align:center;
+    margin-bottom:20px;
+    color:darkred;
+}
+
+input{
+    width:100%;
+    padding:14px;
+    margin-bottom:15px;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+button{
+    width:100%;
+    padding:15px;
+    border:none;
+    background:darkred;
+    color:white;
+    border-radius:5px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+button:hover{
+    background:red;
+}
+
+#message{
+    margin-top:20px;
+    text-align:center;
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<h2>EGAM LOGIN</h2>
+
+<input type="email" id="email" placeholder="Email">
+
+<input type="password" id="password" placeholder="Password">
+
+<button id="loginBtn">
+Login
+</button>
 
 <div id="message"></div>
 
