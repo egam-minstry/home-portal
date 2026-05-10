@@ -1,520 +1,389 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>EGAM Ministry Vocational Training Centre</title>
-
-<link rel="icon" href="logo.png">
-
-<style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-body{
-    font-family:Arial, sans-serif;
-    background:#111;
-    color:white;
-    line-height:1.6;
-}
-
-/* NAVBAR */
-
-.navbar{
-    background:darkred;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:15px 40px;
-    position:sticky;
-    top:0;
-    z-index:1000;
-    box-shadow:0 2px 10px rgba(0,0,0,0.4);
-}
-
-.logo{
-    font-size:28px;
-    font-weight:bold;
-    color:white;
-}
-
-.nav-links a{
-    color:white;
-    text-decoration:none;
-    margin-left:20px;
-    font-size:16px;
-    transition:0.3s;
-}
-
-.nav-links a:hover{
-    color:gold;
-}
-
-/* HERO SECTION */
-
-.hero{
-    height:90vh;
-    background:
-    linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
-    url('church.jpg');
-    background-size:cover;
-    background-position:center;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    padding:20px;
-}
-
-.hero-content{
-    max-width:800px;
-}
-
-.hero h1{
-    font-size:55px;
-    margin-bottom:20px;
-    color:gold;
-}
-
-.hero p{
-    font-size:22px;
-    margin-bottom:30px;
-}
-
-.hero button{
-    padding:15px 30px;
-    border:none;
-    background:darkred;
-    color:white;
-    font-size:18px;
-    border-radius:5px;
-    cursor:pointer;
-    transition:0.3s;
-}
-
-.hero button:hover{
-    background:red;
-}
-
-/* ABOUT SECTION */
-
-.section{
-    padding:70px 30px;
-}
-
-.section-title{
-    text-align:center;
-    font-size:40px;
-    margin-bottom:50px;
-    color:gold;
-}
-
-.about-content{
-    max-width:1100px;
-    margin:auto;
-    text-align:center;
-    font-size:18px;
-    line-height:2;
-}
-
-/* TRAINING */
-
-.training-grid{
-    max-width:1200px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
-}
-
-.training-card{
-    background:#1b1b1b;
-    padding:30px;
-    border-radius:10px;
-    border-top:5px solid darkred;
-    text-align:center;
-    transition:0.3s;
-}
-
-.training-card:hover{
-    transform:translateY(-10px);
-}
-
-.training-card h3{
-    color:gold;
-    margin-bottom:15px;
-}
-
-/* EXECUTIVES */
-
-.executives{
-    max-width:1300px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:30px;
-}
-
-.exec-card{
-    background:#1b1b1b;
-    border-radius:10px;
-    overflow:hidden;
-    text-align:center;
-    transition:0.3s;
-    border-bottom:5px solid darkred;
-}
-
-.exec-card:hover{
-    transform:scale(1.03);
-}
-
-.exec-card img{
-    width:100%;
-    height:300px;
-    object-fit:cover;
-}
-
-.exec-card h3{
-    margin-top:15px;
-    color:gold;
-    padding:0 10px;
-}
-
-.exec-card p{
-    padding:15px;
-    color:#ddd;
-}
-
-/* CONTACT */
-
-.contact{
-    text-align:center;
-    max-width:900px;
-    margin:auto;
-    font-size:18px;
-    line-height:2;
-}
-
-/* FOOTER */
-
-.footer{
-    background:darkred;
-    padding:25px;
-    text-align:center;
-    margin-top:50px;
-    color:white;
-}
-
-/* MOBILE */
-
-@media(max-width:768px){
-
-.navbar{
-    flex-direction:column;
-    gap:15px;
-}
-
-.nav-links{
-    text-align:center;
-}
-
-.nav-links a{
-    display:inline-block;
-    margin:10px;
-}
-
-.hero h1{
-    font-size:38px;
-}
-
-.hero p{
-    font-size:18px;
-}
-
-.section-title{
-    font-size:30px;
-}
-
-}
-
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EGAM Ministry | Church & Vocational Training Centre</title>
+    <!-- Bootstrap 5 + Icons + Google Fonts -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #fef9f0;
+            color: #2c2c2c;
+        }
+        /* Navbar styling */
+        .navbar {
+            background: #8b0000 !important; /* deep red */
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            padding: 12px 20px;
+        }
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.8rem;
+            color: #ffd966 !important;
+            letter-spacing: 1px;
+        }
+        .navbar-brand span {
+            color: white;
+        }
+        .nav-link {
+            color: #f8f9fa !important;
+            font-weight: 500;
+            margin: 0 8px;
+            transition: 0.3s;
+        }
+        .nav-link:hover, .dropdown-item:hover {
+            color: #ffd966 !important;
+        }
+        .dropdown-menu {
+            background: #8b0000;
+            border: none;
+            border-radius: 10px;
+            margin-top: 8px;
+        }
+        .dropdown-item {
+            color: white !important;
+            font-weight: 500;
+        }
+        .dropdown-item:hover {
+            background: #a52a2a;
+            color: #ffd966 !important;
+        }
+        .btn-outline-light {
+            border-color: #ffd966;
+            color: #ffd966;
+        }
+        .btn-outline-light:hover {
+            background: #ffd966;
+            color: #8b0000;
+        }
+        /* Marquee */
+        .marquee-container {
+            background: #2c2c2c;
+            color: #ffd966;
+            padding: 10px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .marquee-text {
+            display: inline-block;
+            animation: marquee 18s linear infinite;
+            padding-left: 100%;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+        /* Graduation Card */
+        .grad-card {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            overflow: hidden;
+            margin: 30px auto;
+            max-width: 800px;
+        }
+        .grad-card img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+        .card-title {
+            color: #8b0000;
+            font-weight: 700;
+        }
+        /* Section Headings */
+        .section-heading {
+            text-align: center;
+            margin: 50px 0 30px;
+            font-weight: 700;
+            color: #8b0000;
+            border-bottom: 3px solid #ffd966;
+            display: inline-block;
+            padding-bottom: 8px;
+        }
+        /* Admin Cards */
+        .admin-card {
+            background: white;
+            border-radius: 15px;
+            text-align: center;
+            padding: 20px;
+            transition: 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            height: 100%;
+        }
+        .admin-card:hover {
+            transform: translateY(-5px);
+        }
+        .admin-img {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #ffd966;
+            margin-bottom: 15px;
+            background: #f0f0f0;
+        }
+        .admin-name {
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: #8b0000;
+        }
+        .admin-title {
+            color: #555;
+            font-size: 0.9rem;
+        }
+        /* Facilitator & Church Activity Cards */
+        .facility-card, .activity-card {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            transition: 0.2s;
+            box-shadow: 0 5px 10px rgba(0,0,0,0.05);
+            height: 100%;
+        }
+        .facility-card i, .activity-card i {
+            font-size: 2.5rem;
+            color: #8b0000;
+            margin-bottom: 15px;
+        }
+        .facility-card h5, .activity-card h5 {
+            font-weight: 600;
+            color: #2c2c2c;
+        }
+        footer {
+            background: #1e1e1e;
+            color: #ccc;
+            padding: 30px 0;
+            margin-top: 50px;
+            text-align: center;
+        }
+        footer a {
+            color: #ffd966;
+            text-decoration: none;
+        }
+        @media (max-width: 768px) {
+            .navbar-brand { font-size: 1.4rem; }
+            .admin-img { width: 100px; height: 100px; }
+        }
+    </style>
 </head>
-
 <body>
 
-<!-- NAVBAR -->
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">EGAM <span>Ministry</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNavbar">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
+                <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <!-- Facilitators Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="facilitatorsDropdown" role="button" data-bs-toggle="dropdown">
+                        Facilitators
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#facilitators">T.K Fashion House</a></li>
+                        <li><a class="dropdown-item" href="#facilitators">Band B Events & Cakes</a></li>
+                        <li><a class="dropdown-item" href="#facilitators">Christalone Computers</a></li>
+                        <li><a class="dropdown-item" href="#facilitators">Otunba Furnitures</a></li>
+                    </ul>
+                </li>
+                <!-- Church Activities Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="churchDropdown" role="button" data-bs-toggle="dropdown">
+                        Church Activities
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#church">Sunday Worship Service</a></li>
+                        <li><a class="dropdown-item" href="#church">Yearly Events</a></li>
+                        <li><a class="dropdown-item" href="#church">Programs</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                <li class="nav-item"><a class="nav-link btn btn-outline-light ms-2 px-3 rounded-pill" href="register.html">Sign Up</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
 
-<div class="navbar">
-
-<div class="logo">
-EGAM MINISTRY
+<!-- Marquee -->
+<div class="marquee-container">
+    <div class="marquee-text">🎓 REGISTRATION FOR SECOND QUARTER OF 2026 IS ONGOING! 🎓 Enroll now for Vocational Training & Church Programs. Contact us for details. 🎓</div>
 </div>
 
-<div class="nav-links">
-<a href="#">Home</a>
-<a href="#">About</a>
-<a href="#">Contact</a>
-<a href="#">Help</a>
-<a href="logins.html">Sign In</a>
-<a href="registers.html">Register</a>
+<div class="container my-4">
+    <!-- Graduation Picture Card -->
+    <div class="grad-card">
+        <img src="graduation.png" alt="Graduation Ceremony" onerror="this.src='https://via.placeholder.com/800x400?text=Graduation+Photo+(graduation.png)'">
+        <div class="card-body text-center">
+            <h3 class="card-title">🎉 Recent Graduation Ceremony 🎉</h3>
+            <p class="card-text">Celebrating the success of our 2025 graduates in various vocational skills and spiritual growth. God bless our alumni!</p>
+        </div>
+    </div>
+
+    <!-- Administrative Officers Section -->
+    <div class="text-center mt-5">
+        <h2 class="section-heading">📋 Administrative Officers</h2>
+    </div>
+    <div class="row g-4">
+        <div class="col-md-4 col-lg-2">
+            <div class="admin-card">
+                <img src="img/grace.png" alt="Executive Director" class="admin-img" onerror="this.src='https://via.placeholder.com/130'">
+                <div class="admin-name">Prof G.A ADEGOYE</div>
+                <div class="admin-title">Executive Director</div>
+            </div>
+        </div>
+        <div class="col-md-4 col-lg-2">
+            <div class="admin-card">
+                <img src="img/mum.png" alt="Principal" class="admin-img" onerror="this.src='https://via.placeholder.com/130'">
+                <div class="admin-name">PST. MRS. MARY O. ADEGOYE</div>
+                <div class="admin-title">Principal</div>
+            </div>
+        </div>
+        <div class="col-md-4 col-lg-2">
+            <div class="admin-card">
+                <img src="img/ayo.png" alt="Registrar" class="admin-img" onerror="this.src='https://via.placeholder.com/130'">
+                <div class="admin-name">Mr EMMANUEL A. ADEGOYE</div>
+                <div class="admin-title">Registrar</div>
+            </div>
+        </div>
+        <div class="col-md-4 col-lg-2">
+            <div class="admin-card">
+                <img src="img/esther.png" alt="Secretary" class="admin-img" onerror="this.src='https://via.placeholder.com/130'">
+                <div class="admin-name">MRS. ESTHER T. IYUNADE</div>
+                <div class="admin-title">Secretary</div>
+            </div>
+        </div>
+        <div class="col-md-4 col-lg-2">
+            <div class="admin-card">
+                <img src="img/thelma.png" alt="Chairman" class="admin-img" onerror="this.src='https://via.placeholder.com/130'">
+                <div class="admin-name">MRS. THELMA COLLINS</div>
+                <div class="admin-title">Chairman Board of Directors</div>
+            </div>
+        </div>
+        <div class="col-md-4 col-lg-2">
+            <div class="admin-card">
+                <img src="img/go.png" alt="General Overseer" class="admin-img" onerror="this.src='https://via.placeholder.com/130'">
+                <div class="admin-name">PASTOR PRAISE DAVID A. ADEGOYE </div>
+                <div class="admin-title">General Overseer</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Facilitators Section (Vocational Categories) -->
+    <div class="text-center mt-5" id="facilitators">
+        <h2 class="section-heading">🛠️ Our Facilitators & Vocational Categories</h2>
+    </div>
+    <div class="row g-4">
+        <div class="col-md-6 col-lg-3">
+            <div class="facility-card">
+                <i class="fas fa-tshirt"></i>
+                <h5>T.K Fashion House</h5>
+                <p>Expert tailoring, fashion design and fabric styling.</p>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+            <div class="facility-card">
+                <i class="fas fa-birthday-cake"></i>
+                <h5>Band B Events & Cakes</h5>
+                <p>Event planning, catering, and customized cakes.</p>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+            <div class="facility-card">
+                <i class="fas fa-laptop-code"></i>
+                <h5>Christalone Computers</h5>
+                <p>ICT training, hardware repairs, and software solutions.</p>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+            <div class="facility-card">
+                <i class="fas fa-couch"></i>
+                <h5>Otunba Furnitures</h5>
+                <p>Modern furniture making, upholstery and interior decor.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Church Activities Section -->
+    <div class="text-center mt-5" id="church">
+        <h2 class="section-heading">⛪ Church Activities & Programs</h2>
+    </div>
+    <div class="row g-4 mb-5">
+        <div class="col-md-4">
+            <div class="activity-card">
+                <i class="fas fa-church"></i>
+                <h5>Sunday Worship Service</h5>
+                <p>Join us every Sunday at 9:00 AM for praise, worship, and the Word. All are welcome!</p>
+                <small class="text-muted">📍 Main Sanctuary</small>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="activity-card">
+                <i class="fas fa-calendar-alt"></i>
+                <h5>Yearly Events</h5>
+                <p>Annual conventions, crusades, and thanksgiving galas. Next event: Easter Retreat 2026.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="activity-card">
+                <i class="fas fa-hands-helping"></i>
+                <h5>Special Programs</h5>
+                <p>Youth empowerment, marriage seminars, outreach missions, and discipleship classes.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact & About Section (simple) -->
+    <div class="row g-4" id="about">
+        <div class="col-md-6">
+            <div class="p-4 bg-white rounded-3 shadow-sm">
+                <h4><i class="fas fa-info-circle text-danger"></i> About EGAM Ministry</h4>
+                <p>EGAM Ministry is a faith-based organization committed to spiritual growth, vocational training, and community development. We equip youths and adults with marketable skills while nurturing their relationship with God.</p>
+            </div>
+        </div>
+        <div class="col-md-6" id="contact">
+            <div class="p-4 bg-white rounded-3 shadow-sm">
+                <h4><i class="fas fa-phone-alt text-danger"></i> Contact Us</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Ekute Quarters, Ado Ekiti, Nigeria</p>
+                <p><i class="fas fa-envelope"></i> info@egamministry.org</p>
+                <p><i class="fas fa-phone"></i> +234 80 32 78 16 16</p>
+                <p><i class="fab fa-whatsapp"></i> +234 70-679-045-59</p>
+            </div>
+        </div>
+    </div>
 </div>
 
-</div>
-
-<!-- HERO -->
-
-<section class="hero">
-
-<div class="hero-content">
-
-<h1>
-EGAM Ministry Vocational Training Centre
-</h1>
-
-<p>
-Empowering Youths Through Christian Leadership, Vocational Skills,
-Entrepreneurship Development, and Spiritual Growth.
-</p>
-
-<button onclick="window.location.href='register.html'">
-Join EGAM Today
-</button>
-
-</div>
-
-</section>
-
-<!-- ABOUT -->
-
-<section class="section">
-
-<h2 class="section-title">
-About EGAM Ministry
-</h2>
-
-<div class="about-content">
-
-<p>
-EGAM Ministry Vocational Training Centre is a faith-based Christian
-organization dedicated to empowering young people spiritually,
-academically, vocationally, and economically.
-</p>
-
-<br>
-
-<p>
-Through practical vocational entrepreneurship training,
-mentorship, and church-based leadership development,
-EGAM Ministry equips youths with skills necessary for
-self-reliance, innovation, and godly excellence.
-</p>
-
-<br>
-
-<p>
-The ministry also serves as a center for worship,
-community outreach, youth empowerment,
-business mentorship, and leadership transformation.
-</p>
-
-</div>
-
-</section>
-
-<!-- TRAINING -->
-
-<section class="section">
-
-<h2 class="section-title">
-Vocational & Entrepreneurship Training
-</h2>
-
-<div class="training-grid">
-
-<div class="training-card">
-<h3>Computer Training</h3>
-<p>
-Practical ICT training including web design,
-graphics, programming, and digital literacy.
-</p>
-</div>
-
-<div class="training-card">
-<h3>Entrepreneurship</h3>
-<p>
-Business development, startup mentorship,
-financial empowerment, and leadership skills.
-</p>
-</div>
-
-<div class="training-card">
-<h3>Vocational Skills</h3>
-<p>
-Hands-on training in vocational crafts
-for sustainable youth empowerment.
-</p>
-</div>
-
-<div class="training-card">
-<h3>Christian Leadership</h3>
-<p>
-Developing godly leaders through biblical mentorship,
-discipleship, and ministry development.
-</p>
-</div>
-
-</div>
-
-</section>
-
-<!-- EXECUTIVES -->
-
-<section class="section">
-
-<h2 class="section-title">
-Executive Leadership Team
-</h2>
-
-<div class="executives">
-
-<!-- EXEC 1 -->
-
-<div class="exec-card">
-<img src="success.png">
-
-<h3>
-Professor G.A Adegoye
-</h3>
-
-<p>
-Executive Director of EGAM Ministry
-</p>
-</div>
-
-<!-- EXEC 2 -->
-
-<div class="exec-card">
-<img src="mary.png">
-
-<h3>
-Pastor Mrs Mary O. Adegoye
-</h3>
-
-<p>
-EGAM Empowerment Initiative Principal
-and Co-Founder of Egbo Ohun Alore Ministry
-</p>
-</div>
-
-<!-- EXEC 3 -->
-
-<div class="exec-card">
-<img src="ayo.png">
-
-<h3>
-Mr Emmanuel A. Adegoye
-</h3>
-
-<p>
-Registrar of EGAM Ministry
-</p>
-</div>
-
-<!-- EXEC 4 -->
-
-<div class="exec-card">
-<img src="esther.png">
-
-<h3>
-Mrs Esther Iyunade
-</h3>
-
-<p>
-Secretary, Board of Members
-</p>
-</div>
-
-<!-- EXEC 5 -->
-
-<div class="exec-card">
-<img src="thelma.png">
-
-<h3>
-Mrs Thelma Collins
-</h3>
-
-<p>
-Chairman, Board of Directors
-</p>
-</div>
-
-<!-- EXEC 6 -->
-
-<div class="exec-card">
-<img src="praise.png">
-
-<h3>
-Pastor Praise David Adegoye
-</h3>
-
-<p>
-General Overseer, EGAM Ministry
-</p>
-</div>
-
-</div>
-
-</section>
-
-<!-- CONTACT -->
-
-<section class="section">
-
-<h2 class="section-title">
-Contact EGAM Ministry
-</h2>
-
-<div class="contact">
-
-<p>
-EGAM Ministry Vocational Training Centre
-</p>
-
-<p>
-Empowering Lives Through Faith, Skills & Entrepreneurship
-</p>
-
-<p>
-Email: egamministry@gmail.com
-</p>
-
-<p>
-Phone: +234 XXX XXX XXXX
-</p>
-
-<p>
-Nigeria
-</p>
-
-</div>
-
-</section>
-
-<!-- FOOTER -->
-
-<div class="footer">
-
-<p>
-© 2026 EGAM Ministry Vocational Training Centre.
-All Rights Reserved.
-</p>
-
-</div>
-
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <p>&copy; 2026 EGAM Ministry – Church & Vocational Training Centre. All rights reserved.</p>
+        <p>Follow us: 
+            <a href="#"><i class="fab fa-facebook-f mx-2"></i></a>
+            <a href="#"><i class="fab fa-instagram mx-2"></i></a>
+            <a href="#"><i class="fab fa-youtube mx-2"></i></a>
+        </p>
+        <p class="small">Designed to empower lives for God's glory.</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

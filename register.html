@@ -1,11 +1,21 @@
+<!-- ========================= -->
+<!-- COMPLETE register.html -->
+<!-- ========================= -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EGAM Registration</title>
+
+<title>EGAM Ministry | Registration</title>
+
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
 <style>
+
 *{
     margin:0;
     padding:0;
@@ -13,48 +23,156 @@
 }
 
 body{
-    font-family:Arial;
-    background:#f4f4f4;
+    font-family:'Source Sans Pro',sans-serif;
+    background:darkred;
+    min-height:100vh;
+    position:relative;
+    overflow-x:hidden;
 }
 
-.container{
-    max-width:700px;
-    margin:30px auto;
-    background:white;
-    padding:30px;
-    border-radius:10px;
-    box-shadow:0 0 10px rgba(0,0,0,0.1);
+body::before{
+    content:"";
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:url('img/egamlogo.png') no-repeat center center;
+    background-size:320px;
+    opacity:0.06;
+    z-index:0;
 }
 
-h2{
+/* HEADER */
+
+.site-header{
+    background:#7a0000;
+    padding:25px 20px 15px;
     text-align:center;
-    margin-bottom:20px;
-    color:darkred;
+    position:relative;
+    z-index:2;
 }
 
-input,
+.logo-container img{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    border:4px solid gold;
+    background:white;
+    padding:5px;
+}
+
+/* MARQUEE */
+
+.marquee-wrapper{
+    width:90%;
+    max-width:850px;
+    margin:20px auto 0;
+    overflow:hidden;
+    white-space:nowrap;
+    background:rgba(255,215,0,0.2);
+    border:1px solid gold;
+    padding:10px;
+    border-radius:50px;
+}
+
+.marquee-text{
+    display:inline-block;
+    color:gold;
+    font-size:1.1rem;
+    font-weight:bold;
+    animation:marquee 14s linear infinite;
+    padding-left:100%;
+}
+
+@keyframes marquee{
+    0%{transform:translateX(0);}
+    100%{transform:translateX(-100%);}
+}
+
+/* MAIN */
+
+.main-wrapper{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px 20px;
+    position:relative;
+    z-index:2;
+}
+
+.register-container{
+    width:100%;
+    max-width:1200px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+}
+
+.left-panel{
+    background:
+    linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+    url('img/church.jpg');
+
+    background-size:cover;
+    background-position:center;
+
+    border-radius:15px;
+    padding:40px;
+    color:white;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.left-panel h1{
+    color:gold;
+    font-size:45px;
+    margin-bottom:20px;
+}
+
+.left-panel p{
+    font-size:18px;
+    line-height:1.9;
+}
+
+.right-panel{
+    background:white;
+    border-radius:15px;
+    padding:35px;
+    box-shadow:0 5px 25px rgba(0,0,0,0.2);
+}
+
+.right-panel h2{
+    text-align:center;
+    color:#c9302c;
+    margin-bottom:25px;
+}
+
+.form-control,
 select,
 textarea{
-    width:100%;
-    padding:14px;
     margin-bottom:15px;
-    border:1px solid #ccc;
-    border-radius:5px;
+    height:48px;
 }
 
-button{
-    width:100%;
-    padding:15px;
-    border:none;
-    background:darkred;
+textarea{
+    height:100px !important;
+}
+
+.btn-register{
+    background:#d9534f;
     color:white;
+    width:100%;
+    padding:13px;
+    border:none;
     border-radius:5px;
-    font-size:16px;
-    cursor:pointer;
+    font-size:17px;
 }
 
-button:hover{
-    background:red;
+.btn-register:hover{
+    background:#b52b27;
 }
 
 #message{
@@ -63,171 +181,173 @@ button:hover{
     font-weight:bold;
 }
 
+/* MOBILE */
+
+@media(max-width:900px){
+
+.register-container{
+    grid-template-columns:1fr;
+}
+
+.left-panel{
+    min-height:350px;
+}
+
+}
+
 </style>
 </head>
+
 <body>
 
-<div class="container">
+<!-- HEADER -->
 
-<h2>EGAM MINISTRY REGISTRATION</h2>
+<div class="site-header">
+
+<div class="logo-container">
+<img src="img/egamlogo.png">
+</div>
+
+<div class="marquee-wrapper">
+<div class="marquee-text">
+🎓 EGAM VOCATIONAL CENTRE :
+IN CHRIST WE HOPE, IN HIM WE GLORY 🎓
+</div>
+</div>
+
+</div>
+
+<!-- MAIN -->
+
+<div class="main-wrapper">
+
+<div class="register-container">
+
+<!-- LEFT -->
+
+<div class="left-panel">
+
+<h1>
+Welcome To EGAM Ministry
+</h1>
+
+<p>
+Empowering youths through vocational training,
+Christian leadership,
+entrepreneurship development,
+and spiritual mentorship.
+</p>
+
+<br>
+
+<p>
+Register today and become part of a faith-based
+community transforming lives through education,
+skills acquisition and empowerment.
+</p>
+
+</div>
+
+<!-- RIGHT -->
+
+<div class="right-panel">
+
+<h2>
+Student Registration
+</h2>
 
 <form id="registerForm">
 
-<input type="text" id="username" placeholder="Username" required>
+<input type="text"
+id="username"
+class="form-control"
+placeholder="Username"
+required>
 
-<input type="email" id="email" placeholder="Email Address" required>
+<input type="email"
+id="email"
+class="form-control"
+placeholder="Email Address"
+required>
 
-<input type="password" id="password" placeholder="Password" required>
+<input type="password"
+id="password"
+class="form-control"
+placeholder="Password"
+required>
 
-<input type="text" id="vocational" placeholder="Vocational Category" required>
+<input type="text"
+id="vocational"
+class="form-control"
+placeholder="Vocational Category"
+required>
 
-<input type="text" id="state" placeholder="State Of Origin" required>
+<input type="text"
+id="state"
+class="form-control"
+placeholder="State Of Origin"
+required>
 
-<select id="religion" required>
-<option value="">Select Religion</option>
+<select id="religion" class="form-control" required>
+<option value="">Religion</option>
 <option>Christianity</option>
 <option>Islam</option>
 <option>Traditional</option>
-<option>Others</option>
 </select>
 
-<select id="marital" required>
+<select id="marital" class="form-control" required>
 <option value="">Marital Status</option>
 <option>Single</option>
 <option>Married</option>
 <option>Divorced</option>
-<option>Widowed</option>
 </select>
 
-<input type="text" id="nextofkin" placeholder="Next Of Kin" required>
+<input type="text"
+id="nextofkin"
+class="form-control"
+placeholder="Next Of Kin"
+required>
 
-<input type="text" id="phone" placeholder="Phone Number" required>
+<input type="text"
+id="phone"
+class="form-control"
+placeholder="Phone Number"
+required>
 
-<input type="text" id="kinphone" placeholder="Next Of Kin Phone Number" required>
+<input type="text"
+id="kinphone"
+class="form-control"
+placeholder="Next Of Kin Phone"
+required>
 
-<textarea id="address" placeholder="Address" required></textarea>
+<textarea
+id="address"
+class="form-control"
+placeholder="Address"
+required></textarea>
 
-<label>Date Of Birth</label>
-<input type="date" id="dob" required>
+<label>
+Date Of Birth
+</label>
 
-<button type="submit">
-Register
+<input type="date"
+id="dob"
+class="form-control"
+required>
+
+<button type="submit" class="btn-register">
+Register Now
 </button>
-
-</form>
 
 <div id="message"></div>
 
+</form>
+
 </div>
 
-<script type="module">
+</div>
 
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
-
-import {
-getFirestore,
-doc,
-getDoc,
-updateDoc,
-setDoc
-}
-from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
-
-import {
-getAuth,
-createUserWithEmailAndPassword
-}
-from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
-
-const firebaseConfig = {
-  apiKey: "AIzaSyA1tQE9cGdP7utPLWqHZjkAgySmaCv2foI",
-  authDomain: "egam-ministry.firebaseapp.com",
-  projectId: "egam-ministry",
-  storageBucket: "egam-ministry.firebasestorage.app",
-  messagingSenderId: "276171392995",
-  appId: "1:276171392995:web:852e81ad481cd1cf0042d6",
-  measurementId: "G-MXN0KLPJGX"
-};
-
-const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
-const auth = getAuth(app);
-
-const form = document.getElementById("registerForm");
-const message = document.getElementById("message");
-
-form.addEventListener("submit", async(e)=>{
-
-    e.preventDefault();
-
-    try{
-
-        message.innerHTML = "Creating Account...";
-
-        const username = document.getElementById("username").value;
-        const email = document.getElementById("email").value;
-        const password = document.getElementById("password").value;
-        const vocational = document.getElementById("vocational").value;
-        const state = document.getElementById("state").value;
-        const religion = document.getElementById("religion").value;
-        const marital = document.getElementById("marital").value;
-        const nextofkin = document.getElementById("nextofkin").value;
-        const phone = document.getElementById("phone").value;
-        const kinphone = document.getElementById("kinphone").value;
-        const address = document.getElementById("address").value;
-        const dob = document.getElementById("dob").value;
-
-        const userCredential = await createUserWithEmailAndPassword(auth,email,password);
-
-        const user = userCredential.user;
-
-        const counterRef = doc(db,"counters","registration");
-        const counterSnap = await getDoc(counterRef);
-
-        let currentNumber = counterSnap.data().currentNumber + 1;
-
-        await updateDoc(counterRef,{currentNumber});
-
-        const padded = String(currentNumber).padStart(3,'0');
-
-        const registrationNumber = `egam/2026/2/${padded}`;
-
-        const imageFileName = registrationNumber.replaceAll('/','-') + '.png';
-
-        await setDoc(doc(db,"users",user.uid),{
-
-            registrationNumber,
-            imageFileName,
-            username,
-            email,
-            vocational,
-            state,
-            religion,
-            marital,
-            nextofkin,
-            phone,
-            kinphone,
-            address,
-            dob,
-            createdAt:new Date().toISOString()
-
-        });
-
-        message.innerHTML = `Registration Successful<br>${registrationNumber}`;
-
-        setTimeout(()=>{
-            window.location.href = "login.html";
-        },3000);
-
-    }catch(error){
-
-        message.innerHTML = error.message;
-
-    }
-
-});
-
-</script>
+</div>
 
 </body>
 </html>
