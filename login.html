@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<button id="loginBtn">Login</button>
+
+<div id="message"></div>
+
+</div>
+
+<script type="module">
+
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+
+import {
+getAuth,
+signInWithEmailAndPassword
+}
+from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyA1tQE9cGdP7utPLWqHZjkAgySmaCv2foI",
+  authDomain: "egam-ministry.firebaseapp.com",
+  projectId: "egam-ministry",
+  storageBucket: "egam-ministry.firebasestorage.app",
+  messagingSenderId: "276171392995",
+  appId: "1:276171392995:web:852e81ad481cd1cf0042d6",
+  measurementId: "G-MXN0KLPJGX"
+};
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+
+const loginBtn = document.getElementById("loginBtn");
+const message = document.getElementById("message");
+
+loginBtn.addEventListener("click", async()=>{
+
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    try{
+
+        await signInWithEmailAndPassword(auth,email,password);
+
+        message.innerHTML = "Login Successful";
+
+        setTimeout(()=>{
+            window.location.href = "dashboard.html";
+        },1000);
+
+    }catch(error){
+
+        message.innerHTML = error.message;
+
+    }
+
+});
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Firebase Seed</title>
+
+<style>
+body{
+    font-family:Arial;
+    background:#f4f4f4;
+    padding:50px;
+}
+
+.container{
+    max-width:600px;
+    margin:auto;
+    background:white;
+    padding:40px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+button{
+    background:#0066cc;
+    color:white;
+    border:none;
+    padding:15px 30px;
+    border-radius:5px;
+    cursor:pointer;
+    font-size:18px;
+}
+
+#msg{
+    margin-top:20px;
+    font-size:18px;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>EGAM Firebase Seed</h1>
+    <button id="seedBtn">Initialize Database</button>
+    <div id="msg"></div>
+</div>
+
+<script type="module">
+
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+import { getFirestore, doc, setDoc } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyA1tQE9cGdP7utPLWqHZjkAgySmaCv2foI",
+  authDomain: "egam-ministry.firebaseapp.com",
+  projectId: "egam-ministry",
+  storageBucket: "egam-ministry.firebasestorage.app",
+  messagingSenderId: "276171392995",
+  appId: "1:276171392995:web:852e81ad481cd1cf0042d6",
+  measurementId: "G-MXN0KLPJGX"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+const btn = document.getElementById("seedBtn");
+const msg = document.getElementById("msg");
+
+btn.addEventListener("click", async()=>{
+
+    try{
+
+        await setDoc(doc(db,"counters","registration"),{
+            currentNumber:0
+        });
+
+        msg.innerHTML = "Database Initialized Successfully";
+
+    }catch(error){
+        msg.innerHTML = error.message;
+    }
+
+});
+
+</script>
+
+</body>
+</html>
