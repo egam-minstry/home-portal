@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>EGAM Ministry Vocational Training Centre</title>
+
+<link rel="icon" href="logo.png">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#111;
+    color:white;
+    line-height:1.6;
+}
+
+/* NAVBAR */
+
+.navbar{
+    background:darkred;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 40px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 2px 10px rgba(0,0,0,0.4);
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    color:white;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    font-size:16px;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    color:gold;
+}
+
+/* HERO SECTION */
+
+.hero{
+    height:90vh;
+    background:
+    linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
+    url('church.jpg');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.hero-content{
+    max-width:800px;
+}
+
+.hero h1{
+    font-size:55px;
+    margin-bottom:20px;
+    color:gold;
+}
+
+.hero p{
+    font-size:22px;
+    margin-bottom:30px;
+}
+
+.hero button{
+    padding:15px 30px;
+    border:none;
+    background:darkred;
+    color:white;
+    font-size:18px;
+    border-radius:5px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.hero button:hover{
+    background:red;
+}
+
+/* ABOUT SECTION */
+
+.section{
+    padding:70px 30px;
+}
+
+.section-title{
+    text-align:center;
+    font-size:40px;
+    margin-bottom:50px;
+    color:gold;
+}
+
+.about-content{
+    max-width:1100px;
+    margin:auto;
+    text-align:center;
+    font-size:18px;
+    line-height:2;
+}
+
+/* TRAINING */
+
+.training-grid{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.training-card{
+    background:#1b1b1b;
+    padding:30px;
+    border-radius:10px;
+    border-top:5px solid darkred;
+    text-align:center;
+    transition:0.3s;
+}
+
+.training-card:hover{
+    transform:translateY(-10px);
+}
+
+.training-card h3{
+    color:gold;
+    margin-bottom:15px;
+}
+
+/* EXECUTIVES */
+
+.executives{
+    max-width:1300px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.exec-card{
+    background:#1b1b1b;
+    border-radius:10px;
+    overflow:hidden;
+    text-align:center;
+    transition:0.3s;
+    border-bottom:5px solid darkred;
+}
+
+.exec-card:hover{
+    transform:scale(1.03);
+}
+
+.exec-card img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+}
+
+.exec-card h3{
+    margin-top:15px;
+    color:gold;
+    padding:0 10px;
+}
+
+.exec-card p{
+    padding:15px;
+    color:#ddd;
+}
+
+/* CONTACT */
+
+.contact{
+    text-align:center;
+    max-width:900px;
+    margin:auto;
+    font-size:18px;
+    line-height:2;
+}
+
+/* FOOTER */
+
+.footer{
+    background:darkred;
+    padding:25px;
+    text-align:center;
+    margin-top:50px;
+    color:white;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.navbar{
+    flex-direction:column;
+    gap:15px;
+}
+
+.nav-links{
+    text-align:center;
+}
+
+.nav-links a{
+    display:inline-block;
+    margin:10px;
+}
+
+.hero h1{
+    font-size:38px;
+}
+
+.hero p{
+    font-size:18px;
+}
+
+.section-title{
+    font-size:30px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<div class="navbar">
+
+<div class="logo">
+EGAM MINISTRY
+</div>
+
+<div class="nav-links">
+<a href="#">Home</a>
+<a href="#">About</a>
+<a href="#">Contact</a>
+<a href="#">Help</a>
+<a href="login.html">Sign In</a>
+<a href="register.html">Register</a>
+</div>
+
+</div>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>
+EGAM Ministry Vocational Training Centre
+</h1>
+
+<p>
+Empowering Youths Through Christian Leadership, Vocational Skills,
+Entrepreneurship Development, and Spiritual Growth.
+</p>
+
+<button onclick="window.location.href='register.html'">
+Join EGAM Today
+</button>
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section class="section">
+
+<h2 class="section-title">
+About EGAM Ministry
+</h2>
+
+<div class="about-content">
+
+<p>
+EGAM Ministry Vocational Training Centre is a faith-based Christian
+organization dedicated to empowering young people spiritually,
+academically, vocationally, and economically.
+</p>
+
+<br>
+
+<p>
+Through practical vocational entrepreneurship training,
+mentorship, and church-based leadership development,
+EGAM Ministry equips youths with skills necessary for
+self-reliance, innovation, and godly excellence.
+</p>
+
+<br>
+
+<p>
+The ministry also serves as a center for worship,
+community outreach, youth empowerment,
+business mentorship, and leadership transformation.
+</p>
+
+</div>
+
+</section>
+
+<!-- TRAINING -->
+
+<section class="section">
+
+<h2 class="section-title">
+Vocational & Entrepreneurship Training
+</h2>
+
+<div class="training-grid">
+
+<div class="training-card">
+<h3>Computer Training</h3>
+<p>
+Practical ICT training including web design,
+graphics, programming, and digital literacy.
+</p>
+</div>
+
+<div class="training-card">
+<h3>Entrepreneurship</h3>
+<p>
+Business development, startup mentorship,
+financial empowerment, and leadership skills.
+</p>
+</div>
+
+<div class="training-card">
+<h3>Vocational Skills</h3>
+<p>
+Hands-on training in vocational crafts
+for sustainable youth empowerment.
+</p>
+</div>
+
+<div class="training-card">
+<h3>Christian Leadership</h3>
+<p>
+Developing godly leaders through biblical mentorship,
+discipleship, and ministry development.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- EXECUTIVES -->
+
+<section class="section">
+
+<h2 class="section-title">
+Executive Leadership Team
+</h2>
+
+<div class="executives">
+
+<!-- EXEC 1 -->
+
+<div class="exec-card">
+<img src="success.png">
+
+<h3>
+Professor G.A Adegoye
+</h3>
+
+<p>
+Executive Director of EGAM Ministry
+</p>
+</div>
+
+<!-- EXEC 2 -->
+
+<div class="exec-card">
+<img src="mary.png">
+
+<h3>
+Pastor Mrs Mary O. Adegoye
+</h3>
+
+<p>
+EGAM Empowerment Initiative Principal
+and Co-Founder of Egbo Ohun Alore Ministry
+</p>
+</div>
+
+<!-- EXEC 3 -->
+
+<div class="exec-card">
+<img src="ayo.png">
+
+<h3>
+Mr Emmanuel A. Adegoye
+</h3>
+
+<p>
+Registrar of EGAM Ministry
+</p>
+</div>
+
+<!-- EXEC 4 -->
+
+<div class="exec-card">
+<img src="esther.png">
+
+<h3>
+Mrs Esther Iyunade
+</h3>
+
+<p>
+Secretary, Board of Members
+</p>
+</div>
+
+<!-- EXEC 5 -->
+
+<div class="exec-card">
+<img src="thelma.png">
+
+<h3>
+Mrs Thelma Collins
+</h3>
+
+<p>
+Chairman, Board of Directors
+</p>
+</div>
+
+<!-- EXEC 6 -->
+
+<div class="exec-card">
+<img src="praise.png">
+
+<h3>
+Pastor Praise David Adegoye
+</h3>
+
+<p>
+General Overseer, EGAM Ministry
+</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section class="section">
+
+<h2 class="section-title">
+Contact EGAM Ministry
+</h2>
+
+<div class="contact">
+
+<p>
+EGAM Ministry Vocational Training Centre
+</p>
+
+<p>
+Empowering Lives Through Faith, Skills & Entrepreneurship
+</p>
+
+<p>
+Email: egamministry@gmail.com
+</p>
+
+<p>
+Phone: +234 XXX XXX XXXX
+</p>
+
+<p>
+Nigeria
+</p>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<div class="footer">
+
+<p>
+© 2026 EGAM Ministry Vocational Training Centre.
+All Rights Reserved.
+</p>
+
+</div>
+
+</body>
+</html>
